@@ -1,5 +1,9 @@
 pipeline {
-  agent any
+  agent {
+    docker {
+      image 'adoptopenjdk/openjdk8'
+    }
+  }
   stages {
     stage ('build') {
       steps {
